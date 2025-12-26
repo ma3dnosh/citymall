@@ -1,0 +1,972 @@
+/* ===== General ===== */
+ /* نلغي المسافات الزايدة والمتصفح من عنده يحط */
+* { margin: 0; padding: 0; box-sizing: border-box; animation: slideUp 0.8s ease-out;}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  color:#333;
+  background:#f4f7f6;
+  /* المسافة  بين السطور  */
+  line-height:1.6;
+  scroll-behavior:smooth;
+}
+
+a { text-decoration:none; color:inherit; }
+ul { list-style:none; }
+
+/* ===== Navbar ===== */
+.navbar{
+  background:red;
+  color:#fff;
+  padding: 1rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  top:0;
+  z-index:100;
+  width:100%;
+  font-size: x-large;
+}
+
+
+
+.logo p{ animation: fadeColor 3s infinite ease-in-out;
+font-size:2.5rem;
+  font-weight:700;
+  }
+
+.nav-links{
+  display:flex;
+  gap:80px;
+  align-items:center;
+  animation: updown 9s infinite ease-in-out;
+  
+}
+
+.nav-link{
+  padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.nav-link:hover{
+  background:darkred;
+   
+}
+
+.about{
+  padding: 7px 15px;
+   border-radius: 5px; 
+   font-size: 25px; 
+   color: rgb(255, 255, 255);
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.about:hover{
+
+  background:darkred;
+}
+
+/* Buttons */
+.btn-primary{
+      background: #000;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+    font-size: 20px;
+}
+.btn-primary:hover{ background:darkblue; }
+
+
+
+.btn-large{
+  background: #ff0000;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    display: inline-block;
+    margin-top: 300px;
+    transition: .25s;
+}
+.btn-large:hover{ background:darkblue; }
+/* زر الحجز وصور المحل */
+.btn-outline{
+  width:100%;
+  padding: .75rem;
+  background:transparent;
+  border:2px solid #0f172a;
+  color:#0f172a;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:5px;
+  text-align:center;
+  transition:.25s;
+  font-size: 20px;
+}
+
+.btn-outline1 {
+    width: 100%;
+    padding: .75rem;
+    background: #ff0000;
+    border: 2px solid #0f172a;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: .25s;
+    font-size: 20px;
+}
+
+.btn-outline1:hover{ background:#0f172a; color:#fff; }
+.btn-outline:hover{ background:#0f172a; color:#fff; }
+
+/* .btn-block{ width:100%; font-size:1rem; } */
+
+/* ===== Floating Logo ===== */
+.logo-img{
+  position:fixed;
+  z-index:150;
+  width:100px;
+  border-radius:50%;
+  border:2px solid red;
+  top:50%;
+  left:1%;
+  animation: floatLogo 5s infinite ease-in-out;
+}
+
+/* ===== Hero ===== */
+.hero{
+  width:100%;
+  background-image:url(photo_2025-12-06_22-20-33.jpg);
+  background-size:cover;
+  background-position:center;
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/*  فيه الكلام وفيه الكاردز */
+.container{
+  max-width:1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+/* جملة المتوفر حاليا */
+.section-header{ text-align:center; margin-bottom:2rem; }
+
+
+
+
+/* فيه الكاردز  */
+.listing-grid{
+      padding-top: 2rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+}
+
+
+
+.card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow: 8px 6px 10px rgba(255, 5, 5, 0.1);
+  /* تتحكم ف سرعة الحركة */
+  transition: transform .2s;
+  /* display:flex; */
+  /* flex-direction:column; */
+  min-width:320px;
+  /* scroll-snap-align:start;
+  scroll-margin-top:150px; */
+}
+.card:hover{ transform: translateY(-5px);
+box-shadow: 2px 2px 15px  red; }
+
+.card-image{
+  height:200px;
+  background:#ddd;
+  background-size:cover;
+  background-position:center;
+}
+     /* صور المحلات فالكاردز */
+.space-1{ background-image:url('https://images.unsplash.com/photo-1582037928769-181f2644ec27?auto=format&fit=crop&w=600&q=80'); }
+.space-2{ background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80'); }
+.space-3{ background-image:url('https://images.unsplash.com/photo-1555529733-0e670560f7e1?auto=format&fit=crop&w=600&q=80'); }
+.space-4{ background-image:url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=600'); }
+
+.card-details{
+  padding:2rem;
+  /* flex-grow:1; */
+  display:flex;
+  flex-direction:column;
+}
+   /* حالة المحل فالكارد */
+.badge{
+  font-size:.8rem;
+  font-weight:700;
+  text-transform:uppercase;
+  padding: .25rem .5rem;
+  border-radius:4px;
+   display:inline-block; 
+  margin-bottom:.5rem;
+}
+     /* الوان حالة المحل فالكارد */
+.available{ background:#dcfce7; color:#166534; }
+.lease-pending{ background:#ffedd5; color:#9a3412; }
+
+.price{ color:#3b82f6; font-weight:700; font-size:1.1rem; }
+.features{ margin:1rem 0; color:#64748b; font-size:.9rem; margin-bottom:auto; }
+/* الكارد  */
+.card-actions{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:1rem;
+}
+
+/* Highlight from map */
+.active-card{
+  border:2px solid red !important;
+  box-shadow:0 0 25px rgba(255,0,0,.5);
+  transform:scale(1.05);
+  transition:all .3s ease;
+  z-index:100;
+}
+
+/* ===== Map ===== */
+.map-section{ margin-top:5rem;
+   margin-bottom:5rem; }
+
+.floor-controls{
+      text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.active-btn{
+      background: red !important;
+    color: white !important;
+    border: 2px solid darkred !important;
+    font-size: 20px;
+}
+
+.map-legend{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:1rem;
+  font-size:.9rem;
+}
+
+.legend-item{ display:flex; align-items:center; }
+
+.color-box{
+  width:15px; height:15px;
+  margin-right:8px;
+  border-radius:3px;
+  border:1px solid #ccc;
+}
+.color-box.available{ background:#dcfce7; border-color:#166534; }
+.color-box.leased{ background:#ffdede; border-color:#94a3b8; }
+
+.map-container{
+  max-width:900px;
+  margin:0 auto;
+  background:#fff;
+  padding:1rem;
+  border-radius:12px;
+  box-shadow:0 4px 6px rgba(0,0,0,.05);
+}
+
+/* SVG map styles */
+.map-bg{ fill:#e2e8f0; }
+.unit-shape{ stroke:#64748b; stroke-width:2; transition: fill .3s ease, transform .2s ease; }
+.unit-text{ font-family:sans-serif; font-size:14px; fill:#0f172a; pointer-events:none; text-anchor:middle; dominant-baseline:middle; }
+
+.unit-available .unit-shape{ fill:#dcfce7; cursor:pointer; }
+.unit-available:hover .unit-shape{
+  fill:#22c55e;
+  stroke:#14532d;
+  filter: drop-shadow(0px 3px 3px rgba(0,0,0,.2));
+  transform: scale(1.01);
+}
+
+.unit-leased .unit-shape{ fill:#ffdede; cursor:not-allowed; }
+.unit-leased:hover .unit-shape{
+  fill:#fd5454;
+  stroke:#970101;
+  filter: drop-shadow(0px 3px 3px rgba(0,0,0,.2));
+  transform: scale(1.01);
+}
+
+.kiosk .unit-shape{ stroke-dasharray:5,5; }
+
+/* ===== Contact ===== */
+.contact-section{
+  transform: scale(0.9);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+    overflow: hidden;
+    margin-bottom: -5rem;
+    margin-top: 5.6rem;
+}
+
+.contact-wrapper{ display:flex; flex-wrap:wrap; }
+
+.contact-info{
+  flex:1;
+  background:#0f172a;
+  color:#fff;
+  padding:3rem;
+  min-width:300px;
+}
+.contact-info h2{ font-size:2rem; margin-bottom:1rem; }
+.contact-info p{ margin-bottom:2rem; color:#94a3b8; }
+
+.contact-form-container{
+  flex:2;
+  padding:3rem;
+  min-width:300px;
+}
+
+.form-group{ margin-bottom:1.5rem; }
+
+label{ display:block; margin-bottom:.5rem; font-weight:600; color:#475569; }
+
+input, textarea{
+  width:100%;
+  padding:.8rem;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  font-family:inherit;
+  font-size:1rem;
+  transition: .25s;
+}
+#interest{ background:#f0f0f0; }
+
+input:focus, textarea:focus{
+  outline:none;
+  border-color:#3b82f6;
+  box-shadow:0 0 0 3px rgba(59,130,246,.1);
+}
+
+/* ===== Modal ===== */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:2000;
+  left:0; top:0;
+  width:100%; height:100%;
+  overflow:auto;
+  background: rgba(0,0,0,.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content{
+  background:#fff;
+  margin:5% auto;
+  padding:20px;
+  border:1px solid #888;
+  width:80%;
+  max-width:800px;
+  border-radius:10px;
+  position:relative;
+  animation: fadeIn .4s;
+}
+
+.close-btn{
+  color:#aaa;
+  float:right;
+  font-size:28px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.close-btn:hover{ color:#000; }
+
+.slideshow-container{ position:relative; text-align:center; }
+
+#full-image{
+  width:100%;
+  height:auto;
+  max-height:70vh;
+  object-fit:contain;
+  border-radius:5px;
+  box-shadow:0 4px 8px rgba(0,0,0,.1);
+}
+
+.prev-btn, .next-btn{
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  padding:16px;
+  margin-top:-22px;
+  color:#fff;
+  font-weight:bold;
+  font-size:24px;
+  transition:.3s ease;
+  user-select:none;
+  background: rgba(0,0,0,.3);
+}
+.prev-btn{ left:0; border-radius:3px 0 0 3px; }
+.next-btn{ right:0; border-radius:3px 0 0 3px; }
+
+.prev-btn:hover, .next-btn:hover{ background: rgba(0,0,0,.8); }
+
+/* ===== Video ===== */
+.video{ text-align:center; }
+.video video{ border-radius:12px; }
+
+/* ===== Footer ===== */
+footer{
+  background:red;
+  color:#fff;
+  text-align:center;
+  padding:2rem;
+  margin-top:4rem;
+  font-size:large;
+}
+
+/* ===== Animations ===== */
+@keyframes floatLogo{
+  0% { transform: translate(0, 0); }
+  25%{ transform: translate(40px, -10px); }
+  50%{ transform: translate(80px, 10px); }
+  75%{ transform: translate(40px, -5px); }
+  100%{ transform: translate(0, 0); }
+}
+
+@keyframes fadeColor{
+  0%{ opacity:0; }
+  50%{ opacity:1; }
+  100%{ opacity:0; }
+}
+
+@keyframes fadeIn{
+  from { opacity:0; transform: translateY(-20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+
+@keyframes updown {
+  0%{transform: translateY(0);}
+  25%{transform: translateY(-15px);}
+  50%{transform: translateY(15px);}
+  /* 100%{transform: translateY(-10);} */
+}
+/* ===== About Page Styling ===== */
+
+.about-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto 4rem;
+}
+
+.about-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.about-intro p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Stats Cards Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+/* الكروت متاع مواصفات  المول */
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 3px 2px 8px red;
+  /* لما الكرت يتحرك تكون حركته سلسة */
+   transition: transform 0.3s ease; 
+  
+   
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  
+}
+
+.stat-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card .number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+/* الوصف */
+.stat-card .desc {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* فيها التلاتة البطاقات متاع ارقام الهواتف */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.contact-box {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  background: #fff;
+  border-color: red;
+}
+
+.contact-box h3 { margin-bottom: 0.5rem; font-size: 1.5rem; }
+.contact-box p { margin-bottom: 1.5rem; color: #64748b; }
+
+.btn-contact {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-box.whatsapp .btn-contact { background: #25D366; } /* لون الواتس */
+.contact-box.whatsapp .btn-contact:hover { background: #128C7E; }
+
+.contact-box.phone .btn-contact:hover, 
+.contact-box.email .btn-contact:hover { 
+  background: red; 
+}
+
+/* Hours Box */
+.hours-location {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.hours-box {
+    background: #0f172a;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 8px 8px 0px red;
+}
+
+.hours-box h3 { font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 1px solid #334155; padding-bottom: 10px; display: inline-block;}
+.hours-box ul { list-style: none; padding: 0; }
+.hours-box li { font-size: 1.2rem; margin: 10px 0; }
+
+/* =======================================================
+   1. TABLET & SMALL LAPTOPS (Max-width: 768px)
+   ======================================================= */
+@media (max-width: 768px) {
+    
+    /* --- Global & Layout --- */
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        margin: 2rem auto;
+        padding: 0 0.75rem;
+    }
+
+    /* --- Navbar --- */
+    .navbar {
+        flex-direction: row; /* Keep row for tablets */
+        padding: 0.75rem 1rem;
+        height: auto;
+        gap: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav-link,
+    .about {
+        font-size: 18px; /* Standardized Tablet Size */
+        padding: 6px 10px;
+    }
+
+    .logo p {
+        font-size: 1.8rem;
+    }
+
+    /* Floating Logo */
+    .logo-img {
+        width: 65px;
+        left: 10px;
+        top: 50%;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        /* Auto height is safer for tablets so text doesn't overflow */
+        height: auto !important; 
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    .hero-content h1,
+    .hero h1 {
+        font-size: 2rem !important;
+        margin-top: 20px !important;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-large {
+        font-size: 1.2rem;
+        padding: 0.9rem 1.2rem;
+        margin-top: 2rem;
+    }
+
+    /* --- General Text & Headers --- */
+    .section-header h2 {
+        font-size: 32px !important;
+    }
+
+    .section-header p {
+        font-size: 18px !important;
+    }
+
+    .about-intro h2 {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    .about-intro p {
+        font-size: 1.1rem !important;
+        padding: 0 1.5rem;
+        text-align: justify;
+    }
+
+    /* --- Grids & Listings --- */
+    /* 1. Stats and Contact Grids (Vertical Stack) */
+    .stats-grid, 
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    /* 2. Listings Slider (Horizontal Scroll) */
+    .listing-grid {
+        gap: 1rem;
+        padding: 0 6px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex; /* Ensures slider works */
+    }
+
+    .card {
+        min-width: 55%;
+        min-height: 20%;
+        scroll-snap-align: start;
+    }
+
+    .card-details {
+        padding: 1.25rem;
+    }
+
+    .btn-outline,
+    .btn-outline1 {
+        font-size: 18px;
+        padding: 0.7rem;
+    }
+
+    /* --- Contact Page Specifics --- */
+    .contact-section {
+        transform: none;
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-box {
+        margin-bottom: 1rem;
+    }
+    
+    .hours-box {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    input, textarea {
+        font-size: 1rem;
+    }
+
+    .btn-primary.btn-block {
+        width: 100%;
+        font-size: 18px;
+        padding: 0.75rem;
+    }
+
+    /* --- Map & Video --- */
+    .map-container {
+        padding: 0.5rem;
+        overflow-x: hidden;
+    }
+
+    .interactive-map, 
+    .video video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .floor-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .map-legend {
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* --- Modal --- */
+    .modal-content {
+        width: 92%;
+        margin: 15% auto;
+        padding: 14px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    /* --- Footer --- */
+    footer {
+        font-size: 16px;
+        padding: 1.25rem;
+    }
+}
+
+
+/* =======================================================
+   2. MOBILE PHONES (Max-width: 480px)
+   ======================================================= */
+@media (max-width: 480px) {
+
+    /* --- Navbar --- */
+    .navbar {
+        padding: 0.6rem 0.8rem;
+        gap: 8px;
+    }
+
+    .logo p {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 8px;
+        animation: updown 9s infinite ease-in-out; /* Optional animation */
+    }
+
+    .nav-link,
+    .about {
+        font-size: 16px; /* Smaller for phone */
+        padding: 5px 8px;
+    }
+
+    /* Floating Logo */
+    .logo-img {
+        width: 55px;
+        top: 90px;
+        left: 6px;
+        animation: infinite floatLogo 5s ease-in-out;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        height: 55vh !important; /* Specific height for mobile look */
+        padding: 2rem 0;
+    }
+
+    .btn-large {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+        margin-top: 2rem;
+    }
+
+    /* --- Typography --- */
+    .section-header h2 {
+        font-size: 26px !important;
+    }
+
+    .section-header p {
+        font-size: 16px !important;
+    }
+
+    /* --- Cards & Listings --- */
+    .listing-grid {
+        gap: 0.8rem;
+    }
+
+    .card {
+        min-width: 92%; /* Almost full width cards */
+    }
+
+    .card-image {
+        height: 170px;
+    }
+
+    .card-details {
+        padding: 1rem;
+    }
+
+    .btn-outline,
+    .btn-outline1 {
+        font-size: 16px;
+        padding: 0.6rem;
+    }
+
+    /* --- Contact --- */
+    .contact-section {
+        margin-top: 6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        padding: 1.25rem;
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info p,
+    label,
+    input, 
+    textarea {
+        font-size: 0.95rem;
+    }
+
+    input, textarea {
+        padding: 0.7rem;
+    }
+
+    .btn-primary.btn-block {
+        font-size: 16px;
+        padding: 0.7rem;
+    }
+
+    /* --- Map & Modal --- */
+    .map-container {
+        padding: 0.4rem;
+    }
+
+    .floor-controls {
+        gap: 8px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 0.6rem;
+    }
+
+    .map-legend {
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+    }
+
+    /* --- Footer --- */
+    footer {
+        font-size: 14px;
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+

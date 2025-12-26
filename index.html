@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CityMall | Commercial Spaces for Rent</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="#home"><img class="logo-img" src="IMG_2254.JPG" alt="CityMall Logo"/></a>
+
+  <header class="navbar">
+    <div class="logo"><p>CityMall</p></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#home">الرئيسية</a></li>
+        <li><a class="nav-link" href="#listings">القائمة</a></li>
+        <li><a class="nav-link" href="#mall-map">الخريطة</a></li>
+        <li><a href="about.html" class="about" class="nav-links">  حول المول </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <a href="#listings" class="btn-large">ابحث عن مساحتك</a>
+    </div>
+  </section>
+
+  <section id="listings" class="container">
+    <div class="section-header">
+      <h2 style="font-size: 50px;">المساحات المتوفرة</h2>
+      <p style="font-size: 25px;">تصفح مجموعتنا من أفضل المواقع التجارية</p>
+    </div>
+
+    <div class="listing-grid">
+      
+      <article class="card" id="card-101" data-floor="ground">      
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 101 - المدخل الرئيسي</h3>
+          <p class="price">6,000 د.ل. / شهريا</p>
+          <ul class="features"><li>1,200 متر مكعب</li><li>الدور الارضي</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 101', [
+              'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 101" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-102" data-floor="ground">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 102 - ممر طرابلس</h3>
+          <p class="price">2,250 د.ل. / شهريا</p>
+          <ul class="features"><li>1,200 متر مكعب</li><li>الدور الارضي</li></ul>
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 102', [
+              'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=800',
+              'https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 102" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-103" data-floor="ground">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 103 - زاوية مميزة</h3>
+          <p class="price">4,000 د.ل. / شهريا</p>
+          <ul class="features"><li>1,500 متر مكعب</li><li>الدور الارضي</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 103', [
+              'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 103" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+     <article class="card" id="card-104" data-floor="ground">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1519567241046-7f570eee3d9f?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 104 - ساحة داخلية للمول</h3>
+          <p class="price">10,250 د.ل. / شهريا</p>
+          <ul class="features"><li>2,500 متر مكعب</li><li>الدور الارضي</li></ul>
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 104', [
+              'https://images.unsplash.com/photo-1519567241046-7f570eee3d9f?w=800',
+              'https://images.unsplash.com/photo-1582037928769-181f2644ec27?w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 104" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-K-05" data-floor="ground">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Kiosk K-05 - وسط المول</h3>
+          <p class="price">5,500 د.ل. / شهريا</p>
+          <ul class="features"><li>150 متر مكعب</li><li>الدور الارضي</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Kiosk K-05', [
+              'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1507914372817-5499238896db?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Kiosk K-05" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-106" data-floor="ground">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555529733-0e670560f7e1?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 106 - ممر الخدمات</h3>
+          <p class="price">1,750 د.ل. / شهريا</p>
+          <ul class="features"><li>800 متر مكعب</li><li>الدور الارضي</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 106', [
+              'https://images.unsplash.com/photo-1555529733-0e670560f7e1?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1531297461136-82lw9z1p7x?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 106" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-107" data-floor="ground">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 107 - بجانب البنك</h3>
+          <p class="price">2,500 د.ل. / شهريا</p>
+          <ul class="features"><li>850 متر مكعب</li><li>الدور الارضي</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 107', [
+              'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 107" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-201" data-floor="first">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 201 - اطلالة بانورامية</h3>
+          <p class="price">8,500 د.ل. / شهريا</p>
+          <ul class="features"><li>1,100 متر مكعب</li><li>الدور الاول</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 201', [
+              'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 201" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+     <article class="card" id="card-203" data-floor="first">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 203 - مساحة خاصة سينمائية</h3>
+          <p class="price">7,500 د.ل. / شهريا</p>
+          <ul class="features"><li>3,000 متر مكعب</li><li>الدور الاول</li></ul>
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 203', [
+              'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800',
+              'https://images.unsplash.com/photo-1517604931442-71053e6e2360?w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 203" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-K-20" data-floor="first">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Kiosk K-20 - الدور الأول</h3>
+          <p class="price">1,500 د.ل. / شهريا</p>
+          <ul class="features"><li>100 متر مكعب</li><li>الدور الاول</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Kiosk K-20', [
+              'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Kiosk K-20" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-205" data-floor="first">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600');"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 205 - ركن المطاعم</h3>
+          <p class="price">3,000 د.ل. / شهريا</p>
+          <ul class="features"><li>1,000 متر مكعب</li><li>الدور الاول</li></ul>
+
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 205', [
+              'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800',
+              'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 205" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="card-204" data-floor="first">
+        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565514020176-dbf22384914e?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="card-details" dir="rtl">
+          <span class="badge available">Available</span>
+          <h3>Unit 204 - ممر بنغازي</h3>
+          <p class="price">2,500 د.ل. / شهريا</p>
+          <ul class="features"><li>900 متر مكعب</li><li>الدور الاول</li></ul>
+          <div class="card-actions">
+            <button class="btn-outline1" onclick="openGallery('Unit 204', [
+              'https://images.unsplash.com/photo-1565514020176-dbf22384914e?w=800',
+              'https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?w=800'
+            ])">صور المحل 📷</button>
+            <a href="index2.html?unit=Unit 204" class="btn-outline">استاجر الان</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+      </article>
+    </div>
+  </section>
+    <!-- خريطة المول -->
+  <section id="mall-map" class="container map-section">
+    <div class="section-header">
+      <h2 style="font-size: 50px;">استكشف مخطط المول</h2>
+
+      <div class="floor-controls">
+                                           <!-- بطمتين للتغيير بين الادوار -->
+                                            <!-- on click يعني لما نرصها تديرلي تغيير للطابق عن طريق دالة سويتش فلور فالجافا سكريبت  -->
+        <button id="btn-ground" class="btn-primary active-btn" onclick="switchFloor('ground')">الدور الأرضي (Ground)</button>
+        <button id="btn-first" class="btn-primary" onclick="switchFloor('first')">الدور الأول (1st Floor)</button>
+      </div>
+
+      <p>مرّر المؤشر فوق المساحات لرؤية الحالة</p>
+
+      <div class="map-legend">
+        <span class="legend-item"><span class="color-box available"></span> Available / متوفرة</span>
+        <span class="legend-item"><span class="color-box leased"></span> Leased / مستاجرة</span>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <!-- viexBox مساحة الخريطة    +   xmlns   المسؤولة عن svg + الرابط هو تعريف رسمي ان العناصر تخضع ل قوانين svg -->
+      <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="interactive-map">
+        <rect x="0" y="0" width="800" height="400" class="map-bg" />
+
+        <g id="floor-ground">
+                                       <!-- highlightCard دالة فالجافا سكريبت باش لما نرص عالمحل فالخريطة ترفعني للمحل فالكاردز -->
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('101')">
+            <rect x="20" y="20" width="150" height="120" class="unit-shape" />
+            <text x="95" y="80" class="unit-text">101</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('102')">
+            <rect x="180" y="20" width="150" height="120" class="unit-shape" />
+            <text x="255" y="80" class="unit-text">102</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('103')">
+            <rect x="340" y="20" width="180" height="120" class="unit-shape" />
+            <text x="430" y="80" class="unit-text">103</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('104')">
+            <rect x="530" y="20" width="250" height="180" class="unit-shape" />
+            <text x="655" y="110" class="unit-text">104</text>
+          </g>
+
+          <g class="mall-unit unit-available kiosk clickable" onclick="highlightCard('K-05')">
+            <circle cx="400" cy="200" r="35" class="unit-shape" />
+            <text x="400" y="200" class="unit-text">K-05</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('105')">
+            <rect x="20" y="240" width="200" height="140" class="unit-shape" />
+            <text x="120" y="310" class="unit-text">105</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('106')">
+            <rect x="230" y="240" width="150" height="140" class="unit-shape" />
+            <text x="305" y="310" class="unit-text">106</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('107')">
+            <rect x="390" y="240" width="150" height="140" class="unit-shape" />
+            <text x="465" y="310" class="unit-text">107</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('108')">
+            <rect x="550" y="220" width="230" height="160" class="unit-shape" />
+            <text x="665" y="300" class="unit-text">108</text>
+          </g>
+        </g>
+
+        <g id="floor-first" style="display:none;">
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('201')">
+            <rect x="20" y="20" width="220" height="150" class="unit-shape" />
+            <text x="130" y="95" class="unit-text">201</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('202')">
+            <rect x="250" y="20" width="150" height="150" class="unit-shape" />
+            <text x="325" y="95" class="unit-text">202</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('203')">
+            <rect x="410" y="20" width="370" height="150" class="unit-shape" />
+            <text x="595" y="95" class="unit-text">203</text>
+          </g>
+
+          <g class="mall-unit unit-available kiosk clickable" onclick="highlightCard('K-20')">
+            <circle cx="200" cy="210" r="30" class="unit-shape" />
+            <text x="200" y="210" class="unit-text">K-20</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('205')">
+            <rect x="195" y="250" width="180" height="130" class="unit-shape" />
+            <text x="285" y="315" class="unit-text">205</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('204')">
+            <polygon points="20,380 20,250 150,250 180,380" class="unit-shape" />
+            <text x="90" y="315" class="unit-text">204</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('206')">
+            <rect x="385" y="250" width="150" height="130" class="unit-shape" />
+            <text x="460" y="315" class="unit-text">206</text>
+          </g>
+
+          <g class="mall-unit unit-available clickable" onclick="highlightCard('207')">
+            <rect x="550" y="250" width="230" height="130" class="unit-shape" />
+            <text x="665" y="315" class="unit-text">207</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <div class="video">
+    <video src="video_2025-12-22_21-10-08.mp4" autoplay muted ></video>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CityMall Group. All rights reserved.</p>
+  </footer>
+
+                          <!-- نافدة تطلع لما نرص زر صور المحل -->
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+                         <!-- زر الاغلاق يسكر الدايلوغ -->
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle">صور المحل</h2>
+         <!-- عرض الصور -->
+      <div class="slideshow-container">
+        <img id="full-image" src="" alt="صورة المحل" />
+
+                       <!-- changeImage دالة فالجافا سكريبت للتغيير بين الصور متاع المحل قدام والخلف  -->
+        <a class="prev-btn" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next-btn" onclick="changeImage(1)">&#10095;</a>
+      </div>
+    </div>
+  </div>
+                    <!-- الربط مع الجافا سكريبت  -->
+  <script src="script.js"></script>
+</body>
+</html>
